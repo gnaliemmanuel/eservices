@@ -1,0 +1,384 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>E-SERVICES IMPRIMERIE</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Mise en page : en-tête fixe marron avec bouton WhatsApp, accueil, services, tarifs avec calculateur, étapes, questions, contacts ; barre WhatsApp fixe sur téléphone. */
+:root{
+  --bg:#F7F1E3; --fg:#2A1A0F; --muted:#5E3820; --band:#3B2314; --band-fg:#F7F1E3;
+  --gold:#C9A227; --gold-text:#7A5C14; --line:#DCCFB2; --card:#FFFBF0; --field:#FFFFFF; --btn-fg:#3B2314;
+  --display:'Playfair Display',Georgia,serif; --body:'Source Sans 3','Helvetica Neue',Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#1E120A; --fg:#F7F1E3; --muted:#D9C9A8; --gold-text:#E0BC4A; --line:#4A3020; --card:#2A1A0F; --field:#1E120A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1E120A; --fg:#F7F1E3; --muted:#D9C9A8; --gold-text:#E0BC4A; --line:#4A3020; --card:#2A1A0F; --field:#1E120A; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:18px;line-height:1.55;padding-bottom:84px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--band)}
+.wrap{max-width:1040px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;line-height:1.1}
+.eyebrow{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:var(--gold-text)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;min-height:48px;border-radius:999px;font:700 17px var(--body);text-decoration:none;border:2px solid var(--gold);cursor:pointer;background:transparent;color:inherit}
+.btn.primary{background:var(--gold);color:var(--btn-fg)}
+.btn.primary:hover{filter:brightness(1.08)}
+.btn.ghost{color:var(--band-fg)}
+.btn.ghost:hover{background:rgba(247,241,227,.1)}
+.btn.small{padding:8px 18px;min-height:40px;font-size:15px}
+
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--band);color:var(--band-fg);border-bottom:1px solid rgba(201,162,39,.35)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{width:38px;height:38px;flex:none}
+.brand b{font-family:var(--display);font-size:20px;display:block;line-height:1}
+.brand span{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.bar nav{display:flex;gap:22px;font-weight:600;font-size:16px;margin-left:auto;margin-right:8px}
+.bar nav a{text-decoration:none;padding:6px 0}
+.bar nav a:hover{color:var(--gold)}
+
+.hero{background:var(--band);color:var(--band-fg)}
+.hero .wrap{display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:center;padding-block:56px 60px}
+.hero h1{font-size:clamp(38px,6.6vw,72px);font-weight:800}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{max-width:32em;margin:18px 0 0;color:#E9DFC8;font-size:20px}
+.cta{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.proofs{list-style:none;margin:28px 0 0;padding:0;display:flex;gap:10px 24px;flex-wrap:wrap;font-weight:600;font-size:16px}
+.proofs li::before{content:"";display:inline-block;width:9px;height:9px;background:var(--gold);margin-right:9px;border-radius:2px}
+.hero-mark{justify-self:center;width:min(100%,250px)}
+.hero-mark svg{width:100%;height:auto;display:block}
+
+section{padding-block:64px}
+.head{max-width:38em;margin-bottom:30px}
+.head h2{font-size:clamp(28px,4.2vw,42px);margin-top:8px}
+.head p{margin:12px 0 0;color:var(--muted)}
+
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.svc{background:var(--card);border:1px solid var(--line);padding:24px;border-radius:6px}
+.svc h3{font-size:23px;margin-bottom:8px}
+.svc p{margin:0;color:var(--muted);font-size:17px}
+.svc ul{margin:12px 0 0;padding-left:18px;font-size:16px}
+
+.tarifs{background:var(--band);color:var(--band-fg)}
+.tarifs .eyebrow{color:var(--gold)}
+.tarifs .head p{color:#E9DFC8}
+.tgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start}
+.panel{background:rgba(247,241,227,.06);border:1px solid rgba(201,162,39,.4);border-radius:6px;padding:24px}
+.panel h3{font-size:24px;margin-bottom:4px}
+.panel .note{margin:0 0 12px;color:#E9DFC8;font-size:16px}
+.plist{list-style:none;margin:0;padding:0}
+.plist li{border-top:1px solid rgba(201,162,39,.3)}
+.plist button{all:unset;box-sizing:border-box;width:100%;display:flex;justify-content:space-between;gap:16px;padding:11px 8px;font-size:19px;cursor:pointer;border-radius:4px}
+.plist button:hover,.plist button[aria-pressed="true"]{background:rgba(201,162,39,.16)}
+.plist button:focus-visible{outline:3px solid var(--gold)}
+.plist b{font-family:var(--display);color:var(--gold);white-space:nowrap;font-variant-numeric:tabular-nums}
+.plist .sub{margin:18px 0 6px;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.calc{position:sticky;top:96px;background:var(--card);color:var(--fg);border:2px solid var(--gold);border-radius:6px;padding:24px}
+.calc h3{font-size:25px}
+.calc label{display:block;font-weight:700;font-size:15px;margin:16px 0 6px}
+.calc select,.calc input{width:100%;font:600 18px var(--body);padding:12px 14px;min-height:48px;border:1.5px solid var(--line);border-radius:6px;background:var(--field);color:var(--fg)}
+.qty{display:flex;gap:8px}
+.qty button{flex:none;width:48px;min-height:48px;border-radius:6px;border:1.5px solid var(--line);background:var(--field);color:var(--fg);font:700 22px var(--body);cursor:pointer}
+.qty input{text-align:center}
+.res{margin:18px 0 0;display:grid;gap:8px}
+.res div{display:flex;justify-content:space-between;gap:12px;font-size:17px}
+.res .tot{font-family:var(--display);font-size:30px;font-weight:800;border-top:1px solid var(--line);padding-top:10px}
+.res .tot span:last-child{color:var(--gold-text)}
+.calc .btn{width:100%;margin-top:18px}
+.calc .fine{margin:10px 0 0;font-size:14px;color:var(--muted)}
+
+.line{border-top:1px solid var(--line);padding:14px 0 6px}
+.line:first-child{border-top:0;padding-top:12px}
+.line .top{display:flex;gap:8px;align-items:center}
+.line select{flex:1;min-width:0}
+.line .rm{flex:none;width:44px;min-height:48px;border-radius:6px;border:1.5px solid var(--line);background:var(--field);color:var(--fg);font:700 20px var(--body);cursor:pointer}
+.line .rm:hover{border-color:#B3261E;color:#B3261E}
+.line .bot{display:flex;gap:8px;align-items:center;margin-top:8px}
+.line .bot .qty{width:170px;flex:none}
+.line .sum{margin-left:auto;font-family:var(--display);font-weight:700;font-size:20px;white-space:nowrap}
+.calc .btn.add{width:100%;margin-top:10px;background:transparent;color:var(--fg);border-color:var(--line);min-height:44px;font-size:16px}
+.calc .btn.add:hover{border-color:var(--gold)}
+.calc select{width:100%;font:600 17px var(--body);padding:10px 12px;min-height:48px;border:1.5px solid var(--line);border-radius:6px;background:var(--field);color:var(--fg)}
+.calc .qty input{width:100%;font:600 18px var(--body);padding:10px 4px;min-height:48px;border:1.5px solid var(--line);border-radius:6px;background:var(--field);color:var(--fg);text-align:center}
+.line .hint{font-size:14px;color:var(--gold-text);font-weight:600;margin:6px 0 0;min-height:0}
+.line .hint:empty{display:none}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:22px;counter-reset:s}
+.steps li{counter-increment:s;border-top:3px solid var(--gold);padding-top:14px}
+.steps li::before{content:"Étape " counter(s);display:block;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-text);margin-bottom:6px}
+.steps b{font-family:var(--display);font-size:22px;display:block;margin-bottom:4px}
+.steps span{color:var(--muted);font-size:16px}
+
+.faq{max-width:760px}
+.faq details{border-top:1px solid var(--line);padding:4px 0}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;font:700 19px var(--body);padding:14px 4px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:26px;line-height:1;color:var(--gold-text)}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin:0 4px 16px;color:var(--muted)}
+
+.contact{background:var(--card);border-top:1px solid var(--line)}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px;margin:0}
+.cgrid dt{font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-text)}
+.cgrid dd{margin:6px 0 0;font-size:19px;overflow-wrap:anywhere}
+.cgrid .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:6px}
+.copy{font:600 14px var(--body);padding:5px 12px;border-radius:999px;border:1.5px solid var(--line);background:var(--field);color:var(--fg);cursor:pointer}
+.copy:hover{border-color:var(--gold)}
+
+footer{background:var(--band);color:var(--band-fg);padding-block:22px;font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer span:last-child{color:var(--gold)}
+
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:25;background:var(--band);border-top:2px solid var(--gold);padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.dock .in{max-width:1040px;margin-inline:auto;display:flex;gap:10px;align-items:center;justify-content:space-between}
+.dock p{margin:0;color:var(--band-fg);font-weight:600;font-size:16px}
+.dock .btn{flex:none}
+
+@media(max-width:820px){
+  .bar nav{display:none}
+  .hero .wrap{grid-template-columns:1fr;padding-block:36px 44px}
+  .hero-mark{display:none}
+  .tgrid{grid-template-columns:1fr}
+  .calc{position:static;order:-1}
+  section{padding-block:48px}
+  .dock p{display:none}.dock .btn{width:100%}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="sym" viewBox="0 0 256 256">
+    <path d="M52 44H88V212H52Z"/>
+    <path fill-rule="evenodd" d="M96 44H176L204 58Q242 68 240 98Q238 114 224 118Q226 102 212 94H96ZM150 62L190 68L180 80L152 76Z"/>
+    <path d="M96 106H208L226 154H96Z"/>
+    <path d="M96 166H188L206 212H96Z"/>
+  </symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#haut" aria-label="E-SERVICES IMPRIMERIE, accueil">
+      <svg fill="#C9A227" aria-hidden="true"><use href="#sym"/></svg>
+      <div><b>E-SERVICES</b><span>Imprimerie</span></div>
+    </a>
+    <nav aria-label="Navigation">
+      <a href="#services">Services</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#commander">Commander</a>
+      <a href="#questions">Questions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn primary small" href="https://wa.me/2250712723727" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<main>
+<div class="hero" id="haut">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" style="color:var(--gold)">Yopougon Académie, Abidjan</div>
+      <h1>Donnez vie <em>à vos projets.</em></h1>
+      <p>Impression, personnalisation de T-shirts, polos, casquettes et sacs, services de bureau. Calculez votre prix en 10 secondes et commandez sur WhatsApp.</p>
+      <div class="cta">
+        <a class="btn primary" href="#tarifs">Calculer mon prix</a>
+        <a class="btn ghost" href="https://wa.me/2250712723727" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+      </div>
+      <ul class="proofs">
+        <li>Devis envoyé en PDF</li>
+        <li>Acompte de 50 %</li>
+        <li>Retrait sur place ou livraison Yango</li>
+      </ul>
+    </div>
+    <div class="hero-mark"><svg fill="#C9A227" role="img" aria-label="Symbole E-SERVICES : un E en plumes d'aigle"><use href="#sym"/></svg></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Nos services</div><h2>Imprimer, personnaliser, gérer vos documents</h2></div>
+    <div class="services">
+      <article class="svc"><h3>Impression</h3><p>Documents, flyers, cartes de visite, autocollants et étiquettes.</p><ul><li>Flyers, autocollants, badges et cartes de visite</li><li>Conception graphique à partir de 2 000 FCFA</li></ul></article>
+      <article class="svc"><h3>Personnalisation</h3><p>Votre texte, votre logo ou votre photo sur des articles qui durent.</p><ul><li>T-shirts, polos, pulls</li><li>Casquettes, chasubles, sacs tote, écharpes</li></ul></article>
+      <article class="svc"><h3>Services de bureau</h3><p>Photocopie, reliure, plastification, saisie et mise en page de vos CV, mémoires et rapports.</p></article>
+      <article class="svc"><h3>Services informatiques</h3><p>Création de logos et de visuels, devis et factures, assistance pour vos documents numériques.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="tarifs" id="tarifs">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Tarifs</div><h2>Choisissez, calculez, commandez</h2><p>Cliquez sur un article pour l'ajouter à votre commande. Ajoutez autant d'articles que vous voulez : le total, l'acompte de 50 % et le reste à payer se calculent seuls.</p></div>
+    <div class="tgrid">
+      <div>
+        <div class="panel">
+          <h3>Articles personnalisés</h3>
+          <p class="note">Article neuf et impression comprise. Cliquez pour ajouter à votre commande.</p>
+          <ul class="plist" id="liste-articles"></ul>
+          <div class="sub">Impression uniquement</div>
+          <p class="note" style="margin:0 0 8px">Vous apportez votre tenue, nous imprimons.</p>
+          <ul class="plist" id="liste-impression"></ul>
+        </div>
+      <div class="panel" style="margin-top:24px">
+          <h3>Impression de supports</h3>
+          <p class="note">Prix à l'unité. Quantité minimum selon le support.</p>
+          <div id="prints"></div>
+          <div class="sub">Conception graphique</div>
+          <ul class="plist" id="liste-conception"></ul>
+          <p class="note" style="margin:14px 0 0;font-size:14px">Formats : A5 = 148 × 210 mm · A6 = 105 × 148 mm · A7 = 74 × 105 mm · A8 = 52 × 74 mm.</p>
+        </div>
+      </div>
+      <form class="calc" id="calc" aria-labelledby="calc-titre">
+        <h3 id="calc-titre">Votre commande</h3>
+        <div id="lignes"></div>
+        <button type="button" class="btn add" id="ajouter">+ Ajouter un autre article</button>
+        <div class="res" aria-live="polite">
+          <div><span>Nombre d'articles</span><span id="nb"></span></div>
+          <div><span>Acompte de 50 %</span><span id="ac"></span></div>
+          <div><span>Reste à payer à la remise</span><span id="rp"></span></div>
+          <div class="tot"><span>Total</span><span id="tot"></span></div>
+        </div>
+        <a class="btn primary" id="wa" href="#" target="_blank" rel="noopener">Commander sur WhatsApp</a>
+        <p class="fine">Prix indicatif. Un devis en PDF vous est envoyé pour confirmer.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="commander">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Comment commander</div><h2>Quatre étapes, du message à la remise</h2></div>
+    <ol class="steps">
+      <li><b>Écrivez-nous</b><span>Produit, quantité, date souhaitée. Envoyez votre logo ou votre visuel.</span></li>
+      <li><b>Recevez le devis</b><span>Un devis en PDF, avec le prix et le délai.</span></li>
+      <li><b>Versez 50 %</b><span>L'acompte lance la production.</span></li>
+      <li><b>Récupérez ou faites livrer</b><span>Retrait dans nos locaux, ou livraison par Yango. Le reste à payer se règle avant le départ du colis.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="questions" style="padding-top:0">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Questions fréquentes</div><h2>Avant de commander</h2></div>
+    <div class="faq">
+      <details><summary>Comment payer ?</summary><p>50 % à la commande, le reste avant la remise de l'article. Précisez-nous votre mode de paiement habituel sur WhatsApp.</p></details>
+      <details><summary>Puis-je récupérer ma commande sur place ?</summary><p>Oui, dans nos locaux à Yopougon Académie. Vous payez le reste à payer au retrait.</p></details>
+      <details><summary>Faites-vous la livraison ?</summary><p>Oui, par Yango, ou votre propre livreur peut venir. Avant que le livreur parte avec le colis, le reste à payer est réglé. Les frais de livraison sont à votre charge.</p></details>
+      <details><summary>Quel fichier dois-je envoyer pour mon logo ?</summary><p>Un PNG ou un PDF de bonne qualité, ou une photo nette. Si vous n'avez pas de logo, nous pouvons en créer un.</p></details>
+      <details><summary>Quel est le délai ?</summary><p>Il dépend de l'article et de la quantité. Dites-nous votre date limite sur WhatsApp : nous vous répondons avec le délai exact dans le devis.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Contact</div><h2>Parlons de votre projet</h2></div>
+    <dl class="cgrid">
+      <div><dt>Téléphone / WhatsApp</dt><dd>
+        <div class="row"><span>+225 07 12 72 37 27</span><button class="copy" type="button" data-copy="+225 07 12 72 37 27">Copier</button></div>
+        <div class="row"><span>+225 05 66 23 16 89</span><button class="copy" type="button" data-copy="+225 05 66 23 16 89">Copier</button></div>
+      </dd></div>
+      <div><dt>E-mail</dt><dd><div class="row"><span>e.services2024.ci@gmail.com</span><button class="copy" type="button" data-copy="e.services2024.ci@gmail.com">Copier</button></div></dd></div>
+      <div><dt>Adresse</dt><dd>Abidjan, Yopougon Académie</dd></div>
+      <div><dt>Réseaux</dt><dd>Facebook : E-Services Imprimerie<br>TikTok : eservices imprimerie</dd></div>
+    </dl>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>E-SERVICES IMPRIMERIE</span><span>Donnez vie à vos projets.</span></div></footer>
+
+<div class="dock"><div class="in"><p>Une question ? Écrivez-nous.</p><a class="btn primary" href="https://wa.me/2250712723727" target="_blank" rel="noopener">Commander sur WhatsApp</a></div></div>
+
+<script>
+const ARTICLES=[["T-shirt enfant (0 à 8 ans), blanc",2000],["T-shirt enfant (0 à 8 ans), autres couleurs",2500],["T-shirt adulte (9 ans et plus), blanc",3000],["T-shirt adulte (9 ans et plus), autres couleurs",3500],["Polo blanc",4500],["Polo autres couleurs",5000],["Casquette",3000],["Chasuble sans poche",2500],["Chasuble avec poche",3500],["Chasuble deux tons",5000],["Sac tote",3000],["Pull over blanc",8000],["Pull over autres couleurs",10000],["Écharpe",2500]];
+const IMPR=[["Impression sur tenue enfant",1000],["Impression sur tenue adulte",2000]];
+const PR=[["Autocollants et étiquettes","Autocollant",50,[["A6",300],["A7",200],["A8",100]]],["Badges et cartes de visite","Badge ou carte de visite",20,[["A5",500],["A6",400],["A7",300]]],["Flyers","Flyer",50,[["A5",300],["A6",200],["A7",200]]]];
+const PRINTITEMS=[];PR.forEach(([g,lab,mn,fs])=>fs.forEach(([f,p])=>PRINTITEMS.push([lab+" "+f,p,mn])));
+const CONC=[["Conception graphique – à partir de",2000,1]];
+const ALL=ARTICLES.concat(IMPR,PRINTITEMS,CONC);
+const minOf=n=>((ALL.find(a=>a[0]===n)||[])[2])||1;
+const WA="https://wa.me/2250712723727";
+const fmt=n=>n.toLocaleString("fr-FR")+" FCFA";
+const price=n=>(ALL.find(a=>a[0]===n)||[0,0])[1];
+const box=document.getElementById("lignes");
+function selectEl(){
+  const s=document.createElement("select");s.setAttribute("aria-label","Article");
+  const o0=document.createElement("option");o0.value="";o0.textContent="Choisir un article…";s.appendChild(o0);
+  [["Articles personnalisés",ARTICLES],["Impression uniquement (vous apportez la tenue)",IMPR]].concat(PR.map(([g,lab,mn,fs])=>[g+" (minimum "+mn+")",PRINTITEMS.filter(x=>x[0].startsWith(lab+" "))]),[["Conception",CONC]]).forEach(([g,items])=>{
+    const og=document.createElement("optgroup");og.label=g;
+    items.forEach(([n,p])=>{const o=document.createElement("option");o.value=n;o.textContent=n+" – "+fmt(p);og.appendChild(o)});s.appendChild(og)});
+  return s;
+}
+function addLine(name,q){
+  const d=document.createElement("div");d.className="line";
+  const top=document.createElement("div");top.className="top";
+  const s=selectEl();if(name)s.value=name;
+  const rm=document.createElement("button");rm.type="button";rm.className="rm";rm.textContent="×";rm.setAttribute("aria-label","Retirer cet article");
+  top.append(s,rm);
+  const bot=document.createElement("div");bot.className="bot";
+  const qty=document.createElement("div");qty.className="qty";
+  const m=document.createElement("button");m.type="button";m.textContent="–";m.setAttribute("aria-label","Diminuer la quantité");
+  const i=document.createElement("input");i.type="number";i.inputMode="numeric";i.min="1";i.max="999";i.value=q||1;i.setAttribute("aria-label","Quantité");
+  const p=document.createElement("button");p.type="button";p.textContent="+";p.setAttribute("aria-label","Augmenter la quantité");
+  qty.append(m,i,p);
+  const sum=document.createElement("span");sum.className="sum";
+  bot.append(qty,sum);d.append(top,bot);box.appendChild(d);
+  const hint=document.createElement("div");hint.className="hint";d.appendChild(hint);
+  const mn=()=>minOf(s.value);
+  const qv=()=>{let v=parseInt(i.value,10);return v>=mn()?Math.min(v,999):mn()};
+  const sync=()=>{i.min=mn();if((parseInt(i.value,10)||0)<mn())i.value=mn();hint.textContent=mn()>1?"Quantité minimum : "+mn():""};
+  m.onclick=()=>{i.value=Math.max(mn(),qv()-1);update()};
+  p.onclick=()=>{i.value=Math.min(999,qv()+1);update()};
+  i.oninput=update;i.onchange=()=>{i.value=qv();update()};s.onchange=()=>{sync();update()};sync();
+  rm.onclick=()=>{if(box.children.length>1){d.remove()}else{s.value="";i.value=1;sync()}update()};
+  d._get=()=>({n:s.value,q:qv(),el:sum});
+  d._set=(n)=>{s.value=n;i.value=mn();sync()};d._sel=s;d._qty=i;
+  return d;
+}
+function update(){
+  let tot=0,nb=0,lines=[];
+  [...box.children].forEach(d=>{
+    const g=d._get(),t=g.n?price(g.n)*g.q:0;
+    g.el.textContent=g.n?fmt(t):"";
+    if(g.n){tot+=t;nb+=g.q;lines.push("- "+g.q+" × "+g.n+" ("+fmt(t)+")")}
+  });
+  const ac=Math.round(tot/2);
+  document.getElementById("nb").textContent=nb;
+  document.getElementById("tot").textContent=fmt(tot);
+  document.getElementById("ac").textContent=fmt(ac);
+  document.getElementById("rp").textContent=fmt(tot-ac);
+  const msg=lines.length
+    ?"Bonjour E-SERVICES IMPRIMERIE, je souhaite commander :\n"+lines.join("\n")+"\nTotal : "+fmt(tot)+".\nPouvez-vous m'envoyer un devis ?"
+    :"Bonjour E-SERVICES IMPRIMERIE, je souhaite un devis.";
+  document.getElementById("wa").href=WA+"?text="+encodeURIComponent(msg);
+}
+function choose(n){
+  const empty=[...box.children].find(d=>!d._sel.value);
+  const same=[...box.children].find(d=>d._sel.value===n);
+  if(same){same._qty.value=(parseInt(same._qty.value,10)||1)+1}
+  else if(empty){empty._set(n)}
+  else{addLine(n,1)}
+  update();
+  document.getElementById("calc").scrollIntoView({block:"nearest",behavior:"smooth"});
+}
+function fill(id,items){fill2(document.getElementById(id),items)}
+function fill2(ul,items){items.forEach(([n,p])=>{const li=document.createElement("li");const b=document.createElement("button");b.type="button";b.innerHTML="<span></span><b></b>";b.firstChild.textContent=n;b.lastChild.textContent=fmt(p);b.addEventListener("click",()=>choose(n));li.appendChild(b);ul.appendChild(li)})}
+fill("liste-articles",ARTICLES);fill("liste-impression",IMPR);fill("liste-conception",CONC);
+(function(){const host=document.getElementById("prints");PR.forEach(([g,lab,mn,fs],k)=>{
+  const h=document.createElement("div");h.className="sub";h.textContent=g+" · minimum "+mn;if(k===0)h.style.marginTop="6px";host.appendChild(h);
+  const ul=document.createElement("ul");ul.className="plist";host.appendChild(ul);
+  fill2(ul,fs.map(([f,p])=>[lab+" "+f,p]));});})();
+document.getElementById("ajouter").onclick=()=>{const d=addLine("",1);d._sel.focus();update()};
+document.getElementById("calc").addEventListener("submit",e=>e.preventDefault());
+addLine("",1);update();
+document.querySelectorAll(".copy").forEach(b=>b.addEventListener("click",async()=>{
+  const t=b.dataset.copy;let ok=false;
+  try{await navigator.clipboard.writeText(t);ok=true}catch(e){
+    const r=document.createRange();r.selectNodeContents(b.previousElementSibling);const s=getSelection();s.removeAllRanges();s.addRange(r)}
+  const old=b.textContent;b.textContent=ok?"Copié":"Sélectionné";setTimeout(()=>b.textContent=old,1600)}));
+</script>
+
+</body></html>
